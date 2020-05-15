@@ -1,0 +1,12 @@
+---
+title: Site Title
+timezone: America/Montreal
+collections:
+  promotions:
+    title: Promotions
+    output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: default
