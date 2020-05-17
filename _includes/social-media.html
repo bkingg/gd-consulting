@@ -1,0 +1,15 @@
+<ul class="social-list">
+  {%- assign social_media = site.data.social_media -%}
+  {%- if social_media.facebook_url != empty -%}
+    <li><a href="{{ social_media.facebook_url }}" class="fa fa-facebook" target="_blank"></a></li>
+  {%- endif -%}
+  {%- if social_media.twitter_url != empty -%}
+    <li><a href="{{ social_media.twitter_url }}" class="fa fa-twitter" target="_blank"></a></li>
+  {%- endif -%}
+  {%- if social_media.linkedin_url != empty -%}
+    <li><a href="{{ social_media.linkedin_url }}" class="fa fa-linkedin" target="_blank"></a></li>
+  {%- endif -%}
+  {%- if social_media.instagram_url != empty -%}
+    <li><a href="{{ social_media.instagram_url }}" class="fa fa-instagram" target="_blank"></a></li>
+  {%- endif -%}
+</ul>

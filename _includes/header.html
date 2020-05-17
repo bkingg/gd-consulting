@@ -15,102 +15,28 @@
         <span class="icon-bar"></span>
       </button>
 
-    <ul class="social-list">
-      <li><a href="" class="fa fa-facebook"></a></li>
-      <li><a href="" class="fa fa-twitter"></a></li>
-      <li><a href="" class="fa fa-linkedin"></a></li>
-      <li><a href="" class="fa fa-instagram"></a></li>
-    </ul>  
+    {%- include social-media.html -%}
   
-    <!-- Navigation Desctop -->
+    <!-- Navigation Desktop -->
 
     <nav class="nav-desctop hidden-xs hidden-sm">
       <ul class="nav-desctop-list">
-        <li class="active">
-          <a href="#">Home</a>
-          <ul>
-            <li>
-              <a href="home-agency.html">Agency</a>
+        {%- for link in site.data.menus.menu_principal.links =%}
+          {%- assign link_handle = link.title | slugify -%}
+          {%- assign page_handle = page.title | slugify -%}
+          <li>
+            <a class="{% if page_handle == link_handle %} active{% endif %}" href="{{ link.url }}">{{ link.title }}</a>
+            {%- if link.links -%}
               <ul>
-                <li><a href="home-agency.html">Agency 1 - Classic</a></li>
-                <li><a href="home-agency2.html">Agency 2 - creative</a></li>
-                <li><a href="home-agency3.html">Agency 3 - image</a></li>
-                <li><a href="home-agency4.html">Agency 4 - Video</a></li>
+                {%- for l in link.links -%}
+                  {%- assign l_handle = l.title | slugify -%}
+                  {%- assign page_handle = page.title | slugify -%}
+                  <li><a class="{% if page_handle == l_handle %} active{% endif %}" href="{{ l.url }}">{{ l.title }}</a></li>
+                {%- endfor -%}
               </ul>
-            </li>
-            <li><a href="home-business.html">Business</a></li>
-            <li>
-              <a href="home-freelance.html">Freelance</a>
-              <ul>
-                <li><a href="home-freelance.html">Freelance - Dark</a></li>
-                <li><a href="home-freelance-light.html">Freelance - Light</a></li>
-              </ul>
-            </li>
-            <li class="active"><a href="home-startup.html">Startup</a></li>
-            <li><a href="home-portfolio.html">Portfolio</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Pages</a>
-          <ul>
-            <li>
-              <a href="about.html">About</a>
-              <ul>
-                <li><a href="about.html">About 1</a></li>
-                <li><a href="about2.html">About 2</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="services.html">Services</a>
-              <ul>
-                <li><a href="services.html">Services 1</a></li>
-                <li><a href="services2.html">Services 2</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="portfolio.html">Portfolio</a>
-              <ul>
-                <li><a href="portfolio.html">Portfolio 1</a></li>
-                <li><a href="portfolio2.html">Portfolio 2</a></li>
-                <li><a href="portfolio3.html">Portfolio 3</a></li>
-                <li><a href="portfolio4.html">Portfolio 4</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="portfolio-details.html">Portfolio details</a>
-              <ul>
-                <li><a href="portfolio-details.html">Portfolio details 1</a></li>
-                <li><a href="portfolio-details2.html">Portfolio details 2</a></li>
-              </ul>
-            </li>
-            <li><a href="comming-soon.html">Comming-soon</a></li>
-            <li><a href="404.html">404</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="blog.html">Blog</a>
-          <ul>
-            <li>
-              <a href="blog.html">Blog list</a>
-              <ul>
-                <li><a href="blog.html">Blog list 1</a></li>
-                <li><a href="blog-columns2.html">Blog list 2</a></li>
-                <li><a href="blog-columns3.html">Blog list 3</a></li>
-              </ul>
-            </li>
-            <li><a href="blog-sidebar.html">Blog sidebar</a></li>
-            <li><a href="blog-post.html">Blog details</a></li>
-          </ul>
-        </li>  
-        <li><a href="shortcodes.html">Shortcodes</a></li>  
-        <li>
-          <a href="contacts.html">Contacts</a>
-          <ul>
-            <li><a href="contacts.html">Contacts 1</a></li>
-            <li><a href="contacts2.html">Contacts 2</a></li>
-            <li><a href="contacts3.html">Contacts 3</a></li>
-          </ul>
-        </li>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
       </ul>
     </nav>
 
@@ -119,91 +45,24 @@
     <nav class="nav-mobile hidden-md hidden-lg">
       <div class="collapse navbar-collapse" id="nav-collapse"> 
         <ul class="nav-mobile-list">
-          <li class="active">
-            <a href="#">Home <i class="fa fa-angle-down"></i></a>
-            <ul>
-              <li>
-                <a href="#">Agency <i class="fa fa-angle-down"></i></a>
+          {%- for link in site.data.menus.menu_principal.links =%}
+            {%- assign link_handle = link.title | slugify -%}
+            {%- assign page_handle = page.title | slugify -%}
+            <li>
+              <a class="{% if page_handle == link_handle %} active{% endif %}" href="{{ link.url }}">
+                {{ link.title }}{% if link.links %} <i class="fa fa-angle-down"></i>{% endif -%}
+              </a>
+              {%- if link.links -%}
                 <ul>
-                  <li><a href="home-agency.html">Agency 1 - Classic</a></li>
-                  <li><a href="home-agency2.html">Agency 2 - creative</a></li>
-                  <li><a href="home-agency3.html">Agency 3 - image</a></li>
-                  <li><a href="home-agency4.html">Agency 4 - Video</a></li>
+                  {%- for l in link.links -%}
+                    {%- assign l_handle = l.title | slugify -%}
+                    {%- assign page_handle = page.title | slugify -%}
+                    <li><a class="{% if page_handle == l_handle %} active{% endif %}" href="{{ l.url }}">{{ l.title }}</a></li>
+                  {%- endfor -%}
                 </ul>
-              </li>
-              <li><a href="home-business.html">Business</a></li>
-              <li>
-                <a href="home-freelance.html">Freelance</a>
-                <ul>
-                  <li><a href="home-freelance.html">Freelance - Dark</a></li>
-                  <li><a href="home-freelance-light.html">Freelance - Light</a></li>
-                </ul>
-              </li>
-              <li class="active"><a href="home-startup.html">Startup</a></li>
-              <li><a href="home-portfolio.html">Portfolio</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Pages <i class="fa fa-angle-down"></i></a>
-            <ul>
-              <li>
-                <a href="#">About <i class="fa fa-angle-down"></i></a>
-                <ul>
-                  <li><a href="about.html">About 1</a></li>
-                  <li><a href="about2.html">About 2</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Services <i class="fa fa-angle-down"></i></a>
-                <ul>
-                  <li><a href="services.html">Services 1</a></li>
-                  <li><a href="services2.html">Services 2</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Portfolio <i class="fa fa-angle-down"></i></a>
-                <ul>
-                  <li><a href="portfolio.html">Portfolio 1</a></li>
-                  <li><a href="portfolio2.html">Portfolio 2</a></li>
-                  <li><a href="portfolio3.html">Portfolio 3</a></li>
-                  <li><a href="portfolio4.html">Portfolio 4</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Portfolio details <i class="fa fa-angle-down"></i></a>
-                <ul>
-                  <li><a href="portfolio-details.html">Portfolio details 1</a></li>
-                  <li><a href="portfolio-details2.html">Portfolio details 2</a></li>
-                </ul>
-              </li>
-              <li><a href="comming-soon.html">Comming-soon</a></li>
-              <li><a href="404.html">404</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Blog <i class="fa fa-angle-down"></i></a>
-            <ul>
-              <li>
-                <a href="#">Blog list <i class="fa fa-angle-down"></i></a>
-                <ul>
-                  <li><a href="blog.html">Blog list 1</a></li>
-                  <li><a href="blog-columns2.html">Blog list 2</a></li>
-                  <li><a href="blog-columns3.html">Blog list 3</a></li>
-                </ul>
-              </li>
-              <li><a href="blog-sidebar.html">Blog sidebar</a></li>
-              <li><a href="blog-post.html">Blog details</a></li>
-            </ul>
-          </li>  
-          <li><a href="shortcodes.html">Shortcodes</a></li>  
-          <li>
-            <a href="#">Contacts <i class="fa fa-angle-down"></i></a>
-            <ul>
-              <li><a href="contacts.html">Contacts 1</a></li>
-              <li><a href="contacts2.html">Contacts 2</a></li>
-              <li><a href="contacts3.html">Contacts 3</a></li>
-            </ul>
-          </li>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
         </ul>
       </div>
     </nav> 
