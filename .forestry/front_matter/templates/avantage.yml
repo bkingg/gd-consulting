@@ -13,3 +13,5 @@ fields:
   config:
     maxSize: 1
   label: Icon
+pages:
+- _avantages/avantage-1.md
