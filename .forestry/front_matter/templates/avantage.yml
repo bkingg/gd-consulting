@@ -21,4 +21,5 @@ fields:
   hidden: true
   default: avantage
 pages:
+- _avantages/base-de-donnees-de-clients.md
 - _avantages/recapitulatifs-des-ventes.md
