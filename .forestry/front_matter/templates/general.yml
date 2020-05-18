@@ -4,4 +4,6 @@ hide_body: true
 fields:
 - type: file
   name: logo
-  label: logo
+  label: Logo
+  config:
+    maxSize: 1
