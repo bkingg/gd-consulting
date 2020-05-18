@@ -8,16 +8,16 @@ fields:
     required: true
   label: Title
   default: Avantage Title
-- name: icon
-  type: file
-  config:
-    maxSize: 1
-  label: Icon
 - name: url
   type: text
   config:
     required: false
   label: URL
+- name: icon
+  type: file
+  config:
+    maxSize: 1
+  label: Icon
 pages:
 - _avantages/avantage-1.md
 - _avantages/avantage-2.md
