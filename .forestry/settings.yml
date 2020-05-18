@@ -13,6 +13,13 @@ sections:
 - type: jekyll-pages
   label: Pages
   create: all
+- type: directory
+  path: _avantages
+  label: Avantages
+  create: all
+  match: "**/*"
+  templates:
+  - avantage
 - type: document
   path: _data/social_media.json
   label: Social Media
