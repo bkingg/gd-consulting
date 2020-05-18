@@ -1,6 +1,6 @@
 {
   "logo": "/img/gd-consulting-logo.png",
-  "background_image_404": "/img/gd-consulting-logo.png",
-  "background_image_contact": "/img/gd-consulting-logo.png",
-  "background_image_avantage": "/img/gd-consulting-logo.png"
+  "background_image_404": "/uploads/gd-consulting-logo-square.png",
+  "background_image_contact": "/uploads/gd-consulting-logo-square.png",
+  "background_image_avantage": "/uploads/gd-consulting-logo-square.png"
 }
