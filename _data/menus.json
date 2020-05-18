@@ -1,0 +1,41 @@
+{
+  "menu_principal": {
+    "title": "Menu Principal",
+    "links": [
+      {
+        "title": "Accueil",
+        "url": "/"
+      },
+      {
+        "title": "À Propos",
+        "url": "/a-propos"
+      },
+      {
+        "title": "Services",
+        "url": "#",
+        "links": [
+          {
+            "title": "Recapitulatif des ventes",
+            "url": "/recapitulatif-des-ventes"
+          },
+          {
+            "title": "Base de donnée des clients",
+            "url": "/base-de-donnees-des-clients"
+          },
+          {
+            "title": "Gestion des employés",
+            "url": "/gestion-des-employes"
+          },
+          {
+            "title": "Gestion des stocks",
+            "url": "/gestion-des-stocks"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "url": "/contact"
+      }
+    ]
+  }
+}
