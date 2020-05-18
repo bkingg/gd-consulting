@@ -7,5 +7,20 @@ fields:
   label: Logo
   config:
     maxSize: 1
+- name: background_image_404
+  type: file
+  config:
+    maxSize: 2
+  label: Background Image 404
+- name: background_image_contact
+  type: file
+  config:
+    maxSize: 2
+  label: Background Image Contact
+- name: background_image_avantage
+  type: file
+  config:
+    maxSize: 2
+  label: Background Image Avantage
 pages:
 - _data/general.json
