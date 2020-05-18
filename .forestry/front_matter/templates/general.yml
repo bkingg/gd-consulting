@@ -7,3 +7,5 @@ fields:
   label: Logo
   config:
     maxSize: 1
+pages:
+- _data/general.json
