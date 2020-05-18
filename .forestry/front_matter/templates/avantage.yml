@@ -22,6 +22,7 @@ fields:
   default: avantage
 pages:
 - _avantages/base-de-donnees-de-clients.md
+- _avantages/gestion-de-stocks-avancee-optionnel.md
 - _avantages/gestion-des-employes-optionnel.md
 - _avantages/quarts-de-travail.md
 - _avantages/recapitulatifs-des-ventes.md
