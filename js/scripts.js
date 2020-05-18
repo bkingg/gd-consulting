@@ -1,6 +1,6 @@
 ---
-layout:
+layout: none
 ---
 
 // Partials
-{% include_relative partials/_partial.js %}
+{% comment %}{% include_relative partial/_partial.js %}{% endcomment %}
