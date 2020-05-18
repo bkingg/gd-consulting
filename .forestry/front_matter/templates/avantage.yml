@@ -13,6 +13,11 @@ fields:
   config:
     maxSize: 1
   label: Icon
+- name: url
+  type: text
+  config:
+    required: false
+  label: URL
 pages:
 - _avantages/avantage-1.md
 - _avantages/avantage-2.md
