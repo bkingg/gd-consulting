@@ -5,17 +5,17 @@ opener:
   title: Opener Title
 homepage_sections:
 - template: opener
-  background_image: "/uploads/startup.jpg"
-  title: Opener Title
-  description: ''
+  background_image: "/uploads/futuristic-technology-background-with-honeycombs_23-2148481277.jpg"
+  title: Solutions de Points de Vente
+  description: Ayez l’esprit tranquille, gérez votre magasin à distance
 - template: text-image
   title: Title Goes Here
   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta
     officia, dolore soluta aperiam consequatur, iure possimus dolorem amet rerum blanditiis
     veritatis facilis necessitatibus ducimus, saepe itaque enim. Veniam, labore?
   image: "/uploads/bg-aside-1.jpg"
----
 
+---
 {%- for block in page.homepage_sections -%}
   {%- if block.template == 'opener' -%}
     {%- include homepage/opener.html -%}
