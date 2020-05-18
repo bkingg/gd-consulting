@@ -1,4 +1,26 @@
 ---
 label: Opener
 hide_body: true
-fields: []
+fields:
+- name: background_image
+  type: file
+  config:
+    maxSize: 2
+  label: Background Image
+  default: "/uploads/startup.jpg"
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  hidden: false
+  default: Opener Title
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
