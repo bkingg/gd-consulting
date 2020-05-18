@@ -1,0 +1,28 @@
+<footer id="footer" class="footer footer-2 bg-light">     
+  <div class="container">
+    <h2 class="footer__title text-center">Contact</h2>
+    {%- assign contact = site.data.contact -%}
+    <div class="row-base row">
+      <div class="col-contacts col-base col-sm-12 col-md-4">
+        <h4>Addresse</h4>
+        <p>{{ contact.address }}</p>
+      </div>
+      <div class="col-contacts col-base col-sm-12 col-md-4">
+        <h4>Email</h4>
+        <a href="mailto:{{ contact.email }}" class="email">{{ contact.email }}</a>
+      </div>
+      <div class="col-contacts col-base col-sm-12 col-md-4">
+        <h4>Tel</h4>
+        <a href="tel:{{ contact.tel }}" class="email">{{ contact.tel }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+        <div class="copyrights">
+        © Copyright {{ 'now' | date: '%Y' }} GD Consulting.
+        </div>
+        {%- include social-media.html -%}
+    </div>
+  </div>
+</footer>

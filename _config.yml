@@ -1,9 +1,9 @@
 ---
-title: Site Title
-timezone: America/Montreal
+title: GD Consulting
+timezone: Africa/Dakar
 collections:
-  promotions:
-    title: Promotions
+  avantages:
+    title: Avantages
     output: true
 defaults:
 - scope:
