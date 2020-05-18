@@ -1,4 +1,15 @@
 ---
 label: Avantage
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  default: Avantage Title
+- name: icon
+  type: file
+  config:
+    maxSize: 1
+  label: Icon
