@@ -1,4 +1,12 @@
 ---
 label: Accueil
-hide_body: false
-fields: []
+hide_body: true
+fields:
+- name: opener
+  type: blocks
+  template_types: []
+  config:
+    min: 
+    max: 
+  hidden: false
+  label: Opener
