@@ -1,0 +1,65 @@
+---
+---
+
+{%- assign contact = site.data.contact -%}
+
+<main class="main main-inner main-contacts" data-stellar-background-ratio="0.8" style="background-image: url('{{ site.data.general.background_image_contact }}');">
+  <div class="container">
+    <div class="opener">
+      <h1>Contactez-nous</h1>
+      <!-- <p class="lead">We receive result combining marketing, a creative and industry experience.</p> -->
+    </div>
+  </div>
+</main>
+
+<div class="content"> 
+  <section class="contacts">
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 address-item">
+            <div class="address-icon">
+              <i class="icon ion-iphone"></i>
+            </div>
+            <div class="address-title"><a href="tel:{{ contact.tel }}">{{ contact.tel }}</a></div>
+          </div>
+          <div class="col-md-4 address-item">
+            <div class="address-icon">
+              <i class="icon ion-ios-email-outline"></i>
+            </div>
+            <div class="address-title"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></div>
+          </div>
+          <div class="col-md-4 address-item">
+            <div class="address-icon">
+              <i class="icon ion-ios-location-outline"></i>
+            </div>
+            <div class="address-title">{{ contact.address }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <form class="js-ajax-form" novalidate="novalidate">
+              <div class="col-sm-6 form-group">
+                  <input type="text"  name="Nom" placeholder="Nom">
+              </div>
+               <div class="col-sm-6 form-group">
+                  <input type="email" name="Email" required="" placeholder="Email *">
+                </div>
+              <div class="col-sm-12 form-group">
+                  <textarea rows="3" name="Message" placeholder="Message"></textarea>
+              </div>
+              <div class="col-sm-12 text-right">
+                <button type="submit" class="btn">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <div id="map" class="map"></div> -->
+  </section>
+</div>
