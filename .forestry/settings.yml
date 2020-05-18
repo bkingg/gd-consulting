@@ -9,7 +9,7 @@ sections:
   label: Data
   create: all
   match: "**/*"
-  new_doc_ext: ".json"
+  new_doc_ext: json
 - type: document
   path: _data/general.json
   label: General
@@ -22,7 +22,6 @@ sections:
 - type: document
   path: _data/social_media.json
   label: Social Media
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
