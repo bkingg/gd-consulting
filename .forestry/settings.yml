@@ -7,8 +7,10 @@ sections:
 - type: document
   path: _data/general.json
   label: General
+- type: document
+  path: _data/menus.json
+  label: Menus
   match: "**/*"
-  read_only: false
 - type: jekyll-pages
   label: Pages
   create: all
