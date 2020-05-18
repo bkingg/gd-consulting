@@ -7,10 +7,11 @@
     </div>
     <div class="section-content-2">
       <div class="row-base row">
-        {%- for avantage in site.avantages -%}
+        {%- assign sorted_avantages = (site.avantages | sort: 'date') -%}
+        {%- for avantage in sorted_avantages -%}
           <div class="col-base col-feature col-sm-6 col-md-4">
             <a href="{{ avantage.url }}" class="col-feature__link">
-              {%- if avantage.icon -%}
+              {%- if avantage.icon != empty -%}
                 <img src="{{ avantage.icon }}" alt="{{ avantage.title | escape }}">
               {%- endif -%}
               <h4>{{ avantage.title }}</h4>
