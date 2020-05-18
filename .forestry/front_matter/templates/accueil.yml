@@ -11,3 +11,5 @@ fields:
     min: 
     max: 
   label: Homepage Sections
+pages:
+- index.html
