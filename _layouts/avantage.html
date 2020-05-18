@@ -28,11 +28,29 @@
     </div>
 
     {% include header.html %}
+
+    {%- assign avantage = page -%}
+
+    <main class="main main-inner main-about" data-stellar-background-ratio="0.8" style="background-image: url('{{ site.data.general.background_image_avantage }}');">
+      <div class="container">
+        <div class="opener">
+          <h1>{{ avantage.title }}</h1>
+        </div>
+      </div>
+    </main>
     
-    <!-- Home -->
-    
-    <div>
-      {{ content }}
+    <div class="content">
+      <section class="section pb-0">
+        <div class="container">
+          <div class="row">
+            <header class="text-center col-md-8 col-md-offset-2">
+              <div class="about-entry avantage__content">
+                {{ avantage.content | markdownify }}
+              </div>
+            </header>
+          </div>
+        </div>
+      </section>
       {%- include footer.html -%}
     </div>
 
