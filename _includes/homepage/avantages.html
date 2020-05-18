@@ -1,0 +1,25 @@
+<section class="features bg-light section">
+  <div class="container">
+    <div class="row">
+      <header class="text-center col-md-8 col-md-offset-2">
+        <h2>Les Avantages</h2>
+      </header>
+    </div>
+    <div class="section-content-2">
+      <div class="row-base row">
+        {%- assign avantages = site.avantages -%}
+        {%- for avantage in avantages -%}
+          <div class="col-base col-feature col-sm-6 col-md-4">
+            {%- if avantage.icone -%}
+              <img src="{{ avantage.icone }}" alt="{{ avantage.titre | escape }}">
+            {%- endif -%}
+            <h4>{{ avantage.titre }}</h4>
+            {%- if avantage.description != empty -%}
+              <p>{{ avantage.description }}</p>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
