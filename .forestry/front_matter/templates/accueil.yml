@@ -1,4 +1,13 @@
 ---
 label: Accueil
 hide_body: true
-fields: []
+fields:
+- name: homepage_sections
+  type: blocks
+  template_types:
+  - opener
+  - text-image
+  config:
+    min: 
+    max: 
+  label: Homepage Sections
