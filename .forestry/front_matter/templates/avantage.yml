@@ -22,4 +22,5 @@ fields:
   default: avantage
 pages:
 - _avantages/base-de-donnees-de-clients.md
+- _avantages/quarts-de-travail.md
 - _avantages/recapitulatifs-des-ventes.md
