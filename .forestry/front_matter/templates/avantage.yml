@@ -20,5 +20,3 @@ fields:
   label: Layout
   hidden: true
   default: avantage
-pages:
-- _avantages/avantage-2.md
