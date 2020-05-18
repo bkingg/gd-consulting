@@ -20,3 +20,5 @@ fields:
   label: Layout
   hidden: true
   default: avantage
+pages:
+- _avantages/recapitulatifs-des-ventes.md
