@@ -1,4 +1,21 @@
 ---
 label: Text / Image
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  default: Title Goes Here
+- name: description
+  type: textarea
+  default: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta officia,
+    dolore soluta aperiam consequatur, iure possimus dolorem amet rerum blanditiis
+    veritatis facilis necessitatibus ducimus, saepe itaque enim. Veniam, labore?
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
