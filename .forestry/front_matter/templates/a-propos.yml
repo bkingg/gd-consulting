@@ -1,4 +1,19 @@
 ---
 label: A Propos
 hide_body: true
-fields: []
+fields:
+- name: lead
+  type: text
+  config:
+    required: false
+  label: Lead
+  default: ''
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html
+  label: Description
