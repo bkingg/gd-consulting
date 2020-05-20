@@ -12,6 +12,11 @@ fields:
   config:
     maxSize: 2
   label: Background Image 404
+- name: background_image_a_propos
+  type: file
+  config:
+    maxSize: 2
+  label: Background Image A Propos
 - name: background_image_contact
   type: file
   config:
