@@ -1,0 +1,11 @@
+---
+label: Contact
+hide_body: true
+fields:
+- name: lead
+  type: text
+  config:
+    required: false
+  label: Lead
+pages:
+- contact.html
