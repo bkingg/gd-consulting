@@ -332,20 +332,8 @@
 			$(this).validate({
 				errorClass: 'error wobble-error',
 			    submitHandler: function(form){
-		        	$.ajax({
-			            type: "POST",
-			            url:"mail.php",
-			            data: $(form).serialize(),
-			            success: function() {
-		                	$('.modal').modal('hide');
-		                	$('#success').modal('show');
-		                },
-
-		                error: function(){
-			                $('.modal').modal('hide');
-		                	$('#error').modal('show');
-			            }
-			        });
+						$(form).attr('action', 'https:' + '//formspree.io/' + '{{ site.data.contact.email | split: '@' | first }}' + '@' + '{{ site.data.contact.email | split: '@' | last | split: '.' | first }}' + '.' + '{{ site.data.contact.email | split: '@' | last | split: '.' | last }}');
+      			$(form)[0].submit();
 			    }
 			});
 		});
