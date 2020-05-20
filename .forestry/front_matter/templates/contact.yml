@@ -1,4 +1,9 @@
 ---
 label: Contact
 hide_body: true
-fields: []
+fields:
+- name: lead
+  type: text
+  config:
+    required: false
+  label: Lead
