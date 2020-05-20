@@ -1,4 +1,5 @@
 ---
+lead:
 ---
 
 {%- assign contact = site.data.contact -%}
@@ -7,7 +8,9 @@
   <div class="container">
     <div class="opener">
       <h1>Contactez-nous</h1>
-      <!-- <p class="lead">We receive result combining marketing, a creative and industry experience.</p> -->
+      {%- if page.lead != empty -%}
+        <p class="lead">{{ page.lead }}</p>
+      {%- endif -%}
     </div>
   </div>
 </main>
